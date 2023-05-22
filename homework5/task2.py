@@ -7,8 +7,7 @@
 
 
 def repeats(our_str):
-    array = []
-    [array.append(i) for i in our_str]
+    array = list(our_str)
 
     for i in range(len(array) - 1, -1, -1):
         array[i] += f'_{array.count(array[i])}'

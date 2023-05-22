@@ -23,17 +23,17 @@ def everything_for_your_cat(cats_data):
     dictionary = {}
     our_str = ""
 
-    for i in cats_data:
-        buyer = f'{i[2]} {i[3]}'
-        cat = f'{i[0]}, {i[1]}'
+    for tuple_elm in cats_data:
+        buyer = f'{tuple_elm[2]} {tuple_elm[3]}'
+        cat = f'{tuple_elm[0]}, {tuple_elm[1]}'
 
         if buyer not in dictionary:
             dictionary[buyer] = [cat]
         else:
             dictionary[buyer].append(cat)
 
-    for k, j in dictionary.items():
-        our_str += f'{k}: {"; ".join(j)}\n'
+    for buyer_name, cat_data in dictionary.items():
+        our_str += f'{buyer_name}: {"; ".join(cat_data)}\n'
 
     return our_str
 

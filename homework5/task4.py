@@ -20,7 +20,7 @@ def scrabble(word):
 
     for i in word:
         for j in dictionary:
-            if (i in dictionary[j]) == True:
+            if i in dictionary[j]:
                 points += j
 
     return points

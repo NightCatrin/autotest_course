@@ -10,9 +10,9 @@ def letter_stat(our_str):
 
     letters_dict = {}
 
-    for i in our_str:
-        count = our_str.count(i)
-        letters_dict[f'{i}'] = count
+    for letter in our_str:
+        count = our_str.count(letter)
+        letters_dict[f'{letter}'] = count
 
     return letters_dict
 

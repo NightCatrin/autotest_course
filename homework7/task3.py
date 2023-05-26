@@ -55,7 +55,7 @@ class Bus(PublicTransport):
         if 1000 < num < 9999:
             self.__park = num
         else:
-            raise AssertionError('Значение park должно быть в диапазоне от 1000 до 9999') #тут посмотреть что делать
+            raise AssertionError('Значение __park должно быть в диапазоне от 1000 до 9999')
 
 
 class Tram(PublicTransport):

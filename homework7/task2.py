@@ -36,7 +36,7 @@ class PersonInfo:
         """Метод возвращает строку 'Фамилия И.'"""
 
         name1 = self.name.split()
-        self.shortname = name1[1] + ' ' + name1[0][0] + '.'
+        self.shortname = f'{name1[1]} {name1[0][0]}.'
 
         return self.shortname
 

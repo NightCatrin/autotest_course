@@ -27,6 +27,14 @@
 class PublicTransport:
 
     def __init__(self, brand, engine_power, year, color, max_speed):
+        """
+         Инициализация атрибутов родительского класса
+         :param brand: Марка транспорта
+         :param engine_power: Мощность двигателя, защищенный атрибут
+         :param year: Год выпуска
+         :param color: Цвет
+         :param max_speed: Максимальная скорость
+         """
         self.brand = brand
         self._engine_power = engine_power
         self.year = year
@@ -41,6 +49,17 @@ class PublicTransport:
 class Bus(PublicTransport):
 
     def __init__(self, brand, engine_power, year, color, max_speed, passengers, park, fare):
+        """
+        Инициализация атрибутов класса-наследника
+        :param brand: Марка транспорта
+        :param engine_power: Мощность двигателя, защищенный атрибут
+        :param year: Год выпуска
+        :param color: Цвет
+        :param max_speed: Максимальная скорость
+        :param passengers: Количество пассажиров
+        :param park: Парк приписки автобуса, приватный атрибут
+        :param fare: Стоимость проезда, защищенный атрибут
+        """
         PublicTransport.__init__(self, brand, engine_power, year, color, max_speed)
         self.passengers = passengers
         self.__park = park
@@ -55,12 +74,23 @@ class Bus(PublicTransport):
         if 1000 < num < 9999:
             self.__park = num
         else:
-            raise AssertionError('Значение __park должно быть в диапазоне от 1000 до 9999')
+            self.__park == num, AssertionError('Значение __park должно быть в диапазоне от 1000 до 9999')
 
 
 class Tram(PublicTransport):
 
     def __init__(self, brand, engine_power, year, color, max_speed, route, path, fare):
+        """
+        Инициализация атрибутов класса-наследника
+        :param brand: Марка транспорта
+        :param engine_power: Мощность двигателя, защищенный атрибут
+        :param year: Год выпуска
+        :param color: Цвет
+        :param max_speed: Максимальная скорость
+        :param route: Маршрут трамвая , приватный атрибут
+        :param path: Длина маршрута
+        :param fare: Стоимость проезда, защищенный атрибут
+        """
         PublicTransport.__init__(self, brand, engine_power, year, color, max_speed)
         self.__route = route
         self.path = path

@@ -13,7 +13,7 @@ def start_time():
     print(f'\n\t Тест завершился в {end.strftime("%d.%m %H:%M:%S")}')
 
 
-@pytest.fixture(autouse=True)
+@pytest.fixture()
 def run_time():
     """Выводим время выполнения теста"""
     start = time.time()

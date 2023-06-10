@@ -3,7 +3,7 @@ import time
 import datetime
 
 
-@pytest.fixture(autouse=True)
+@pytest.fixture(scope='class')
 def start_time():
     """Выводим время начала выполнения и завершения теста """
     start = datetime.datetime.now()

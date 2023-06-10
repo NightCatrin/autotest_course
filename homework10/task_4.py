@@ -5,11 +5,10 @@
 import pytest
 from task_2 import all_division
 
-
+@pytest.mark.usefixtures('start_time')
 class TestClass:
     """Класс с тестами"""
 
-    @pytest.mark.usefixtures('start_time')
     @pytest.mark.parametrize('args, result', [pytest.param([15], 15, marks=pytest.mark.smoke),
                                               pytest.param([2, 8], 0.25)])
     def test1(self, args, result):
